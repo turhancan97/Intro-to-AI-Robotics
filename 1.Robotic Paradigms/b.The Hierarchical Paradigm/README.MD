@@ -1,6 +1,7 @@
 # Exercises - Chapter 2
 
 ## The Hierarchical Paradigm
+
 ---
 
 1. Describe the Hierarchical Paradigm in terms of a) the SENSE, PLAN, ACT primitives and b) sensing organization.
