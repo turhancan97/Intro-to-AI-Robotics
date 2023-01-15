@@ -88,25 +88,98 @@ In summary, in ethology, the term "internal state" refers to an animal's physiol
 
 7. Diagram Level 2 in the subsumption example in terms of behaviors.
 
+<p align="center">
+    <img src="../../docs/image/level2_diagram.png" alt="drawing" width="500"/></p>
+
+In the subsumption architecture, behaviors are arranged in a hierarchy, with each level building upon the levels below it. Level 2 in the subsumption example would likely include behaviors that build upon the lower-level behaviors from Level 1. Here is an example of how Level 2 behaviors might be organized in a subsumption architecture:
+
+Level 1: Obstacle avoidance: This behavior is responsible for detecting obstacles and steering the robot away from them.
+
+Level 2: **Goal seeking:** This behavior is responsible for guiding the robot towards a specific goal. It builds upon the obstacle avoidance behavior from Level 1 by incorporating information about the location of the goal and using it to plan a path to the goal.
+
+Level 2: **Path planning:** This behavior is responsible for planning a path to the goal that avoids obstacles while taking into account the robot's current location and the location of the goal. It builds upon the obstacle avoidance behavior from Level 1 and the goal seeking behavior.
+
+Level 2: **Exploration:** This behavior is responsible for exploring an unknown environment. It builds upon the obstacle avoidance behavior from Level 1 by incorporating information about the robot's current location and the location of unknown areas.
+
+Level 2: **Social behavior:** This behavior is responsible for interacting with other robots or agents. It builds upon the obstacle avoidance behavior from Level 1 by incorporating information about the location and behavior of other robots or agents.
+
+It's worth noting that this is just one example of how Level 2 behaviors might be organized in a subsumption architecture, and the behaviors and their hierarchy may change depending on the specific system and the task it is designed to perform.
+
 8. When would an exponentially increasing repulsive field be preferable over a linear increasing repulsive field?
+
+An exponentially increasing repulsive field is preferable over a linear increasing repulsive field in certain situations where a stronger repulsion force is needed as the robot gets closer to an obstacle.
+
+    When the robot needs to avoid a dangerous obstacle: An exponentially increasing repulsive field will provide a stronger repulsion force as the robot gets closer to an obstacle, which makes it more likely that the robot will avoid the obstacle. This is useful in situations where the robot needs to avoid a dangerous obstacle, such as a robot working in a hazardous environment.
+    --------------------------------
+    When the robot is working in an environment with a high density of obstacles: In environments with a high density of obstacles, an exponentially increasing repulsive field will provide a stronger repulsion force as the robot gets closer to an obstacle. This will make it more likely that the robot will avoid collisions with multiple obstacles at once.
+    --------------------------------
+    When the robot needs to avoid obstacles that are moving: An exponentially increasing repulsive field will provide a stronger repulsion force as the robot gets closer to an obstacle, which makes it more likely that the robot will avoid obstacles that are moving.
+    --------------------------------    
+    When the robot is working in an environment with narrow passageways: in environments with narrow passageways, an exponentially increasing repulsive field will provide a stronger repulsion force as the robot gets closer to an obstacle, making it more likely that the robot will avoid getting stuck in a narrow passageway.
+
+It's worth noting that, although an exponentially increasing repulsive field can be useful in some situations, it can also cause the robot to oscillate or become stuck in some cases. So it is important to carefully choose the parameters of the potential field and test the robot's behavior before implementing it.
 
 9.  Suppose you were to construct a library of potential fields of the five primitives. What parameters would you include as arguments to allow a user to customize the fields?
 
-10. Use a spreadsheet, such as Microsoft Excel, to compute various magnitude profiles.
+If I were to construct a library of potential fields with the five basic primitives (uniform, perpendicular, attractive, repulsive, and tangential), I would include the following parameters as arguments to allow a user to customize the fields:
 
-11. Return to Fig. 4.17. Plot the path of the robot if it started in the upper left corner.
+- For the uniform field:
+    - The strength of the uniform field
+    - The direction of the uniform field
+- For the perpendicular field:
+    - The strength of the perpendicular field
+    - The direction of the perpendicular field
+    - The distance from the obstacle at which the field starts to be active
+-For the attractive field:
+    - The strength of the attractive field
+    - The location of the goal
+    - The distance from the goal at which the field starts to be active
+- For the repulsive field:
+    - The strength of the repulsive field
+    - The location of the obstacle
+    - The distance from the obstacle at which the field starts to be active
+The type of repulsion (linear or exponential)
+- For the tangential field:
+    - The strength of the tangential field
+    - The location of the obstacle
+    - The distance from the obstacle at which the field starts to be active
+    - The type of tangential force (clockwise or counterclockwise)
 
-12. Consider the Khepera robot and its IR sensors with the RUNAWAY behavior instantiated for each sensor as in the example in Fig. 4.19. What happens if an IR breaks and always returns a range reading of N, meaning an obstacle is Ncm away? What will be the emergent behavior? and so on. Can a reactive robot notice that it is malfunctioning? Why or why not?
+It's worth noting that, depending on the specific implementation, additional parameters may be needed, and some parameters listed here may not be required. However, these are the most common parameters that are used to customize potential fields of the five primitives in a library.
 
-13. How does the Reactive Paradigm handle the frame problem and the open world assumption?
+1.  Use a spreadsheet, such as Microsoft Excel, to compute various magnitude profiles.
 
-14. An alternative RUNAWAY behavior is to turn 90 degree (either left or right, depending on whether its “left handed” or “right handed” robot) rather than 180 degree. Can this be represented by a potential field?
+The way the magnitude of vectors in the field change is called the **magnitude profile**. There are various types of magnitude profiles that can be used depending on the specific application:
 
-15. Using rules, or if-then statements, is a method for representing and combining programming units which are often called behaviors; for example “if OBSTACLE-ONLEFT and HEADING-RIGHT, then IGNORE.” Can the layers in subsumption for hall-following be written as a series of rules? Can the potential fields? Are rules equivalent to these two methods? Do you think rules are more amenable to good software engineering practices?
+**Linear:** The magnitude of the vector increases or decreases linearly with distance from the source of the field. For example, in a linear repulsive field, the magnitude of the vector would increase linearly as the robot gets closer to an obstacle.
 
-16. Some researchers consider random wandering as a primitive potential field. Recall that random wandering causes the robot to periodically swap to a new vector with a random direction and magnitude. How can a wander field be represented? Does the array of the field represent a physical area or time? Unlike regular potential fields, the vector is computed as a function of time, every nminutes, rather than on the robot’s relationship to something perceivable in the world.
+**Exponential:** The magnitude of the vector increases or decreases exponentially with distance from the source of the field. For example, in an exponential repulsive field, the magnitude of the vector would increase exponentially as the robot gets closer to an obstacle.
 
-17. [Programming] Design and implement potential fields:
+**Inverse Square:** The magnitude of the vector is inversely proportional to the square of the distance from the source of the field. For example, in an inverse square attractive field, the magnitude of the vector would decrease as the square of the distance from the goal.
+
+**Sigmoid:** The magnitude of the vector increases or decreases according to a sigmoid function, which is a type of mathematical function that is often used to model biological processes. For example, in a sigmoid repulsive field, the magnitude of the vector would increase according to a sigmoid function as the robot gets closer to an obstacle.
+
+**Step-wise:** The magnitude of the vector increases or decreases according to a step-wise function. For example, in a step-wise repulsive field, the magnitude of the vector would increase abruptly when the robot reaches a certain distance from the obstacle.
+
+2.  Return to Fig. below. Plot the path of the robot if it started in the upper left corner.
+
+<p align="center">
+    <img src="../../docs/image/path_robot.png" alt="drawing" width="500"/></p>
+
+<p align="center">
+    <img src="../../docs/image/path_robot2.png" alt="drawing" width="500"/></p>
+
+3.  Consider the Khepera robot and its IR sensors with the RUNAWAY behavior instantiated for each sensor as in the example in Fig. 4.19. What happens if an IR breaks and always returns a range reading of N, meaning an obstacle is Ncm away? What will be the emergent behavior? and so on. Can a reactive robot notice that it is malfunctioning? Why or why not?
+
+4.  How does the Reactive Paradigm handle the frame problem and the open world assumption?
+
+5.  An alternative RUNAWAY behavior is to turn 90 degree (either left or right, depending on whether its “left handed” or “right handed” robot) rather than 180 degree. Can this be represented by a potential field?
+
+6.  Using rules, or if-then statements, is a method for representing and combining programming units which are often called behaviors; for example “if OBSTACLE-ONLEFT and HEADING-RIGHT, then IGNORE.” Can the layers in subsumption for hall-following be written as a series of rules? Can the potential fields? Are rules equivalent to these two methods? Do you think rules are more amenable to good software engineering practices?
+
+7.  Some researchers consider random wandering as a primitive potential field. Recall that random wandering causes the robot to periodically swap to a new vector with a random direction and magnitude. How can a wander field be represented? Does the array of the field represent a physical area or time? Unlike regular potential fields, the vector is computed as a function of time, every nminutes, rather than on the robot’s relationship to something perceivable in the world.
+
+8.  [Programming] Design and implement potential fields:
 - Construct a potential field to represent a “move through door” behavior from primitive potential fields. Why won’t a simple attractive field work? ANS: if the robot is coming from a side, it will graze the door frame because the robot is not a point, it has width and limited turning radius.
 - What happens if a person is exiting the door as the robot enters? Design an appropriate “avoid” potential field, and show the emergent potential field when AVOID
 and MOVE-THRU-DOOR are activated at the same time.
