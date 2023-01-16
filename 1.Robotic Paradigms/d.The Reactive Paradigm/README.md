@@ -18,7 +18,7 @@
 
     - Under a vertical decomposition, an agent starts with primitive survival behaviors and evolves new layers of behaviors which either reuse the lower, older behaviors, inhibit the older behaviors, or create parallel tracks of more advanced behaviors. The parallel tracks can be thought of layers, stacked vertically. Each layer has access to sensors and actuators independently of any other layers. If anything happens to an advanced behavior, the lower level behaviors would still operate. This return to a lower level mimics degradation of autonomous functions in the brain. Functions in the brain stem (such as breathing) continue independently of higher order functions (such as counting, face recognition, task planning), allowing a person who has brain damage from a car wreck to still breathe, etc.
 
-2. List the characteristics of a reactive robotic system.
+3. List the characteristics of a reactive robotic system.
 
     - Reactive robotic system decomposes functionality into behaviors, which tightly couple perception to action without the use of intervening abstract (global) representations. This is a broad, vague definition. Over the years, the reactive paradigm has acquired several connotations and characteristics from the way practitioners have used the paradigm.
     - The primary connotation of a reactive robotic system is that it executes rapidly. The tight coupling of sensing and acting permits robots to operate in real-time, moving at speeds of 1-2 cm per second. Behaviors can be implemented directly in hardware as circuits, or with low computational complexity algorithms (O(n)). This means that behaviors execute quickly regardless of the processor.
@@ -29,7 +29,7 @@
       - These systems inherently follow good software design principles.
       - Animal models of behavior are often cited as a basis for these systems or a particular behavior.,
 
-3. Describe the differences between two dominant methods for combining behaviors in a reactive architecture, subsumption and potential field summation.
+4. Describe the differences between two dominant methods for combining behaviors in a reactive architecture, subsumption and potential field summation.
 
 Rodney Brooks’ subsumption architecture is the most influential of the purely Reactive Paradigm systems. Part of the influence stems from the publicity  surrounding the very naturalistic robots built with subsumption. The term “behavior” in the subsumption architecture has a less precise  meaning than in other architectures. A behavior is a network of sensing and  acting modules which accomplish a task.
 
@@ -50,7 +50,7 @@ Potential field summation, on the other hand, is a method in which behaviors are
 
 In summary, subsumption is a method in which behaviors are arranged in a hierarchy, with the lower-level behaviors having priority over higher-level behaviors, while potential field summation is a method in which behaviors are combined through the use of potential fields, with the robot's movement determined by the balance of opposing forces.
 
-4. Evaluate the subsumption architecture in terms of: support for modularity, niche targetability, ease of portability to other domains, robustness.
+5. Evaluate the subsumption architecture in terms of: support for modularity, niche targetability, ease of portability to other domains, robustness.
 
 Evaluating the subsumption architecture in terms of support for modularity, niche targetability, ease of portability to other domains, and robustness:
 
@@ -64,7 +64,7 @@ Evaluating the subsumption architecture in terms of support for modularity, nich
 
 Overall, subsumption architecture is a good choice for a robot system that operates in real-time, sensor-based environments and it is easy to add or remove behaviors, modify the system as needed, and create specialized systems for specific applications. However, it may not be as easily portable to other domains as other architectures.
 
-5. Evaluate potential field methodologies in terms of: support for modularity, niche targetability, ease of portability to other domains, robustness.
+6. Evaluate potential field methodologies in terms of: support for modularity, niche targetability, ease of portability to other domains, robustness.
 
 Evaluating potential field methodologies in terms of support for modularity, niche targetability, ease of portability to other domains, and robustness:
 
@@ -78,7 +78,7 @@ Evaluating potential field methodologies in terms of support for modularity, nic
 
 Overall, potential field methodologies are good choice for a robot system because they support modularity and niche targetability, they are easy to port to other domains and provide a stable and predictable behavior. However, they can be sensitive to the parameters used in the potential fields and the robot may get stuck in local minima or maxima if the parameters aren't set properly.
 
-6. What is the difference between the way the term “internal state” was used in ethology and the way “internal state” means in behavioral robotics?
+7. What is the difference between the way the term “internal state” was used in ethology and the way “internal state” means in behavioral robotics?
 
 In ethology, the term "internal state" is used to refer to an animal's physiological or emotional state. This includes things like hunger, thirst, fear, or aggression. These internal states are thought to drive an animal's behavior, and they are often used to explain why an animal behaves in a certain way.
 
@@ -86,7 +86,7 @@ In behavioral robotics, the term "internal state" is used to refer to the state 
 
 In summary, in ethology, the term "internal state" refers to an animal's physiological or emotional state, which drive its behavior, while in behavioral robotics, the term "internal state" refers to the state of a robot's internal processes or sensors which can be used to control its behavior.
 
-7. Diagram Level 2 in the subsumption example in terms of behaviors.
+8. Diagram Level 2 in the subsumption example in terms of behaviors.
 
 <p align="center">
     <img src="../../docs/image/level2_diagram.png" alt="drawing" width="500"/></p>
@@ -105,7 +105,7 @@ Level 2: **Social behavior:** This behavior is responsible for interacting with 
 
 It's worth noting that this is just one example of how Level 2 behaviors might be organized in a subsumption architecture, and the behaviors and their hierarchy may change depending on the specific system and the task it is designed to perform.
 
-8. When would an exponentially increasing repulsive field be preferable over a linear increasing repulsive field?
+9. When would an exponentially increasing repulsive field be preferable over a linear increasing repulsive field?
 
 An exponentially increasing repulsive field is preferable over a linear increasing repulsive field in certain situations where a stronger repulsion force is needed as the robot gets closer to an obstacle.
 
@@ -119,7 +119,7 @@ An exponentially increasing repulsive field is preferable over a linear increasi
 
 It's worth noting that, although an exponentially increasing repulsive field can be useful in some situations, it can also cause the robot to oscillate or become stuck in some cases. So it is important to carefully choose the parameters of the potential field and test the robot's behavior before implementing it.
 
-9.  Suppose you were to construct a library of potential fields of the five primitives. What parameters would you include as arguments to allow a user to customize the fields?
+10. Suppose you were to construct a library of potential fields of the five primitives. What parameters would you include as arguments to allow a user to customize the fields?
 
 If I were to construct a library of potential fields with the five basic primitives (uniform, perpendicular, attractive, repulsive, and tangential), I would include the following parameters as arguments to allow a user to customize the fields:
 
@@ -147,7 +147,7 @@ The type of repulsion (linear or exponential)
 
 It's worth noting that, depending on the specific implementation, additional parameters may be needed, and some parameters listed here may not be required. However, these are the most common parameters that are used to customize potential fields of the five primitives in a library.
 
-1.  Use a spreadsheet, such as Microsoft Excel, to compute various magnitude profiles.
+11.  Use a spreadsheet, such as Microsoft Excel, to compute various magnitude profiles.
 
 The way the magnitude of vectors in the field change is called the **magnitude profile**. There are various types of magnitude profiles that can be used depending on the specific application:
 
@@ -161,7 +161,7 @@ The way the magnitude of vectors in the field change is called the **magnitude p
 
 **Step-wise:** The magnitude of the vector increases or decreases according to a step-wise function. For example, in a step-wise repulsive field, the magnitude of the vector would increase abruptly when the robot reaches a certain distance from the obstacle.
 
-2.  Return to Fig. below. Plot the path of the robot if it started in the upper left corner.
+12.  Return to Fig. below. Plot the path of the robot if it started in the upper left corner.
 
 <p align="center">
     <img src="../../docs/image/path_robot.png" alt="drawing" width="500"/></p>
@@ -169,26 +169,105 @@ The way the magnitude of vectors in the field change is called the **magnitude p
 <p align="center">
     <img src="../../docs/image/path_robot2.png" alt="drawing" width="500"/></p>
 
-3.  Consider the Khepera robot and its IR sensors with the RUNAWAY behavior instantiated for each sensor as in the example in Fig. 4.19. What happens if an IR breaks and always returns a range reading of N, meaning an obstacle is Ncm away? What will be the emergent behavior? and so on. Can a reactive robot notice that it is malfunctioning? Why or why not?
+13.  Consider the Khepera robot and its IR sensors with the RUNAWAY behavior instantiated for each sensor as in the example in Fig. below. What happens if an IR breaks and always returns a range reading of N, meaning an obstacle is N cm away? What will be the emergent behavior? and so on. Can a reactive robot notice that it is malfunctioning? Why or why not?
 
-4.  How does the Reactive Paradigm handle the frame problem and the open world assumption?
+<p align="center">
+    <img src="../../docs/image/Khepera.png" alt="drawing" width="500"/></p>
 
-5.  An alternative RUNAWAY behavior is to turn 90 degree (either left or right, depending on whether its “left handed” or “right handed” robot) rather than 180 degree. Can this be represented by a potential field?
+If an IR sensor on the Khepera robot breaks and always returns a range reading of N (meaning an obstacle is N cm away), the RUNAWAY behavior instantiated for that sensor will be activated, regardless of whether there is an actual obstacle or not. This would cause the robot to turn away from the direction where the broken sensor is pointing, as if there is an obstacle in that direction.
 
-6.  Using rules, or if-then statements, is a method for representing and combining programming units which are often called behaviors; for example “if OBSTACLE-ONLEFT and HEADING-RIGHT, then IGNORE.” Can the layers in subsumption for hall-following be written as a series of rules? Can the potential fields? Are rules equivalent to these two methods? Do you think rules are more amenable to good software engineering practices?
+As a result, the emergent behavior of the robot would be to move away from the direction where the broken sensor is pointing, even if there is no obstacle there. This would make the robot avoid an area that is safe to navigate, which can lead to a limitation in the robot's mobility and cause it to miss its goals.
 
-7.  Some researchers consider random wandering as a primitive potential field. Recall that random wandering causes the robot to periodically swap to a new vector with a random direction and magnitude. How can a wander field be represented? Does the array of the field represent a physical area or time? Unlike regular potential fields, the vector is computed as a function of time, every nminutes, rather than on the robot’s relationship to something perceivable in the world.
+A reactive robot, such as the Khepera, can not notice that it is malfunctioning by itself. The reactive robot only responds to its sensor's readings, and it doesn't have an understanding of the sensor's performance or its own performance. If a sensor is broken, the robot will keep responding to the readings as if they are correct and it doesn't have a way to detect the malfunction.
 
-8.  [Programming] Design and implement potential fields:
+However, an external system or a human observer can detect that the robot is malfunctioning by observing its behavior or by analyzing the sensor's data. The robot's behavior can indicate that a sensor is malfunctioning, and the sensor's data can be analyzed to detect the malfunction.
+
+In summary, if an IR sensor on the Khepera robot breaks and always returns a range reading of N, the RUNAWAY behavior instantiated for that sensor will be activated, and the emergent behavior of the robot would be to move away from the direction where the broken sensor is pointing, even if there is no obstacle there. A reactive robot, such as the Khepera, can not notice that it is malfunctioning by itself, but an external system or a human observer can detect it by observing the robot's behavior or by analyzing the sensor's data.
+
+14.  How does the Reactive Paradigm handle the frame problem and the open world assumption?
+
+The reactive paradigm is a way of controlling robotic systems that is based on the idea of reacting to the current sensor readings in real-time. It is designed to handle the frame problem and the open world assumption in the following ways:
+
+The frame problem: The frame problem is the problem of determining the relevant information from the sensor readings. The reactive paradigm handles the frame problem by only considering the current sensor readings and ignoring any irrelevant information. The robot only reacts to the current sensor readings and does not try to plan for the future or keep track of the past.
+
+The open world assumption: The open world assumption is the assumption that the robot's environment is unknown and can change at any time. The reactive paradigm handles the open world assumption by constantly monitoring the sensor readings and reacting to any changes in the environment. The robot does not rely on a pre-existing model of the environment and can adapt to new situations as they arise.
+
+In summary, the reactive paradigm handles the frame problem and the open world assumption by constantly monitoring the sensor readings and only reacting to the current sensor readings and ignoring any irrelevant information, and not trying to plan for the future or keep track of the past and it does not rely on a pre-existing model of the environment and can adapt to new situations as they arise.
+
+Therefore, it solves the frame problem by eliminating the need to model the world. It also doesn’t have to worry about the open world being non-monotonic and having some sort of truth maintenance mechanism, because the behaviors do not remember the past. There may be some perceptual persistence leading to a fixed-action pattern type of behavior (e.g., corridor following), but there is no mechanism which monitors for changes in the environment. The behaviors simply respond to whatever stimulus is in the environment.
+
+15.  An alternative RUNAWAY behavior is to turn 90 degree (either left or right, depending on whether its “left handed” or “right handed” robot) rather than 180 degree. Can this be represented by a potential field?
+
+This can be achieved by creating a repulsive potential field that is centered on the obstacle and has a 90-degree angle of influence.
+
+The magnitude of the repulsive force would increase as the robot gets closer to the obstacle, and the direction of the force would point away from the obstacle at a 90-degree angle. This would cause the robot to turn away from the obstacle at a 90-degree angle, rather than a 180-degree angle.
+
+In order to represent the "left handed" or "right handed" feature, we can add a parameter to the potential field that specifies the direction of the force. For example, if the parameter is set to "left handed", the force will point to the left at a 90-degree angle and if the parameter is set to "right handed" the force will point to the right at a 90-degree angle.
+
+In summary, an alternative RUNAWAY behavior where the robot turns 90 degrees (either left or right) can be represented by a potential field. The field should be centered on the obstacle and have a 90-degree angle of influence. It should also have a parameter that specifies the direction of the force (left or right).
+
+16.  Using rules, or if-then statements, is a method for representing and combining programming units which are often called behaviors; for example “if OBSTACLE-ON-LEFT and HEADING-RIGHT, then IGNORE.” Can the layers in subsumption for hall-following be written as a series of rules? Can the potential fields? Are rules equivalent to these two methods? Do you think rules are more amenable to good software engineering practices?
+
+Yes, the layers in subsumption for hall-following can be written as a series of rules. Each layer of the subsumption architecture can be represented by a set of if-then statements that dictate the robot's behavior in different situations. For example, the lowest layer of the subsumption architecture for hall-following might have a rule that says "if OBSTACLE-ON-LEFT and HEADING-RIGHT, then IGNORE" to avoid collisions with obstacles.
+
+Potential fields can also be represented using rules. Each primitive potential field can be represented by a set of if-then statements that dictate the robot's behavior based on the sensor readings and the location of the obstacle or goal. For example, a repulsive potential field might have a rule that says "if OBSTACLE-ON-LEFT, then TURN-RIGHT" to avoid collisions with obstacles.
+
+Rules are not equivalent to the subsumption architecture or potential fields, but they can be used to represent and combine programming units, which are often called behaviors. The subsumption architecture and potential fields are different approaches to controlling robotic systems, and they have their own strengths and weaknesses. The subsumption architecture is based on a hierarchy of behaviors, while potential fields are based on mathematical functions that describe the robot's behavior.
+
+Rules are more amenable to good software engineering practices than the subsumption architecture or potential fields, as rules are easy to understand and maintain. Rules can be written in a simple, human-readable form, which makes them easy to understand and modify. They are also easy to test, as they can be tested independently, and they are easy to debug, as they can be traced back to the specific rule that caused the error.
+
+In summary, the layers in subsumption for hall-following and the potential fields can be written as a series of rules, but rules are not equivalent to these two methods. Rules are more amenable to good software engineering practices than the subsumption architecture or potential fields, as rules are easy to understand and maintain, easy to test, and easy to debug.
+
+17.  Some researchers consider random wandering as a primitive potential field. Recall that random wandering causes the robot to periodically swap to a new vector with a random direction and magnitude. How can a wander field be represented? Does the array of the field represent a physical area or time? Unlike regular potential fields, the vector is computed as a function of time, every n minutes, rather than on the robot’s relationship to something perceivable in the world.
+
+A wander field can be represented as a potential field where the direction and magnitude of the vector are randomly generated at regular intervals of time. Instead of being based on the robot's relationship to something perceivable in the world, like obstacles or goals, the vector is computed as a function of time.
+
+The array of the field can represent either a physical area or time. If the array represents a physical area, the robot will randomly explore a specific area, swapping to a new vector with a random direction and magnitude as it moves. If the array represents time, the robot will swap to a new vector with a random direction and magnitude every n minutes, regardless of its location.
+
+To represent the wander field, we can use a set of if-then statements that dictate the robot's behavior based on the current time. For example, the rule might say "if time is n minutes, then change the vector to a random direction and magnitude." Additionally, we can use a random number generator to generate the new direction and magnitude of the vector.
+
+It's worth noting that, unlike regular potential fields, the wander field does not provide a specific goal or objective for the robot, and it is often used as a complementary method to other potential fields, or in scenarios where the robot is supposed to explore an unknown environment.
+
+In summary, a wander field can be represented as a potential field where the direction and magnitude of the vector are randomly generated at regular intervals of time, and it can be represented by a set of if-then statements that dictate the robot's behavior based on the current time and a random number generator. The array of the field can represent either a physical area or time. Unlike regular potential fields, the wander field does not provide a specific goal or objective for the robot and it is often used as a complementary method to other potential fields.
+
+18.  [Programming] Design and implement potential fields:
 - Construct a potential field to represent a “move through door” behavior from primitive potential fields. Why won’t a simple attractive field work? ANS: if the robot is coming from a side, it will graze the door frame because the robot is not a point, it has width and limited turning radius.
 - What happens if a person is exiting the door as the robot enters? Design an appropriate “avoid” potential field, and show the emergent potential field when AVOID
 and MOVE-THRU-DOOR are activated at the same time.
 - Simulate this using the Khepera simulator for Unix systems found at:
 http://www.k-team.com.
 - Run this on a real khepera.
+- 
+```
+function MOVE_THRU_DOOR(door_location, robot_location, robot_width, door_width, turning_radius)
+    attractive_force = ATTRACTIVE_FORCE(door_location, robot_location)
+    perpendicular_force_left = PERPENDICULAR_FORCE(door_location, robot_location, robot_width/2 + turning_radius, -90)
+    perpendicular_force_right = PERPENDICULAR_FORCE(door_location, robot_location, robot_width/2 + turning_radius, 90)
+    tangential_force_left = TANGENTIAL_FORCE(door_location, robot_location, door_width/2, -90)
+    tangential_force_right = TANGENTIAL_FORCE(door_location, robot_location, door_width/2, 90)
+    return attractive_force + perpendicular_force_left + perpendicular_force_right + tangential_force_left + tangential_force_right
+end
+```
+In this pseudocode, we are using a combination of primitive potential fields to create a "move through door" behavior. The attractive_force is used to pull the robot towards the door location. The perpendicular_force_left and perpendicular_force_right are used to push the robot away from the left and right sides of the door frame, respectively. The tangential_force_left and tangential_force_right are used to guide the robot towards the center of the door, by applying a force tangentially to the door frame. This helps the robot to navigate through the door without grazing the door frame, which is a common problem when using a simple attractive field.
 
-1.  [Programming] Program two versions of a phototropic behavior using the Khepera simulator. Both versions should use the same motor schema, an attractive field, but different perceptual schemas. In one version, the perceptual schema processes light from a single sensor and the behavior is instantiated 8 times. In the second version, the perceptual
-schema processes light from all sensors and returns the brightest. Set up five interesting “worlds” in the simulator with different placements of lights. Compare the emergent behavior for each world.
+Why won’t a simple attractive field work? A simple attractive field would only pull the robot towards the door location, and it would not take into account the robot's width and turning radius, which can cause the robot to graze the door frame when coming from a side. By using a combination of primitive potential fields, the "move through door" behavior takes into account the robot's physical constraints and guides the robot to navigate through the door smoothly.
 
-1.  [Digital Circuits]
-For readers with a background in digital circuits, build one or more of the simple creatures in Flynn and Jones’ Mobile Robots: Inspiration to Implementation 76 using a Rug Warrior kit.
+```
+function AVOID(obstacle_location, robot_location, robot_width)
+    repulsive_force = REPULSIVE_FORCE(obstacle_location, robot_location)
+    perpendicular_force_left = PERPENDICULAR_FORCE(obstacle_location, robot_location, robot_width/2, -90)
+    perpendicular_force_right = PERPENDICULAR_FORCE(obstacle_location, robot_location, robot_width/2, 90)
+    return repulsive_force + perpendicular_force_left + perpendicular_force_right
+end
+```
+In this pseudocode, we are using a repulsive force to push the robot away from the obstacle location, and perpendicular forces to push the robot away from the left and right sides of the obstacle, respectively. The resulting emergent potential field when AVOID and MOVE-THRU-DOOR are activated at the same time would be a combination of these forces, where the robot would be pulled towards the door location but pushed away from the obstacle location and its sides.
+
+What happens if a person is exiting the door as the robot enters: If a person is exiting the door as the robot enters, the AVOID potential field would be activated by the presence of the person, and the robot would be pushed away from the person's location. The MOVE-THRU-DOOR potential field would still be activated, pulling the robot towards the door, but the emergent potential field would be a combination of these forces. The robot would navigate through the door while avoiding the person, potentially waiting for the person to pass before entering or finding an alternative path.
+
+19.  [Programming] Program two versions of a phototropic behavior using the Khepera simulator. Both versions should use the same motor schema, an attractive field, but different perceptual schemas. In one version, the perceptual schema processes light from a single sensor and the behavior is instantiated 8 times. In the second version, the perceptual schema processes light from all sensors and returns the brightest. Set up five interesting “worlds” in the simulator with different placements of lights. Compare the emergent behavior for each world.
+
+- No answering
+
+20.  [Digital Circuits] For readers with a background in digital circuits, build one or more of the simple creatures in Flynn and Jones’ Mobile Robots: Inspiration to Implementation 76 using a Rug Warrior kit.
+
+- No answering
