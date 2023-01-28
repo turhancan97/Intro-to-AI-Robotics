@@ -90,17 +90,49 @@ Imagine you have a robot and you want it to do different things depending on the
 
 6. Consider the Pick Up the Trash example in Sec. 5.5.2. The example assumed the arena was empty except for walls, cans, and trash cans. What would happen if there were chairs and tables present? Could the gripper accidently scoop a chair or table leg? How would the system react? What changes, if any, would need to be made to the behavior table and FSA?
 
-7. Solve the 1994 International Association for Unmanned Systems Unmanned Ground Vehicle problem using STRIPS (Ch. 2). Be sure to include a world model and a difference table.y
+    If there were chairs and tables present in the Pick Up the Trash example, the gripper could accidentally scoop a chair or table leg. The system would likely react by trying to grasp the object and failing, and then continuing to wander around looking for cans and trash. To prevent this from happening, changes would need to be made to the behavior table and FSA. One possible solution would be to add a new state to the FSA for "Identifying Objects", where the robot would use its sensors to determine if an object is a can or trash, a chair or table leg before trying to pick it up. Additionally, the behavior table would need to be adjusted to include new behaviors for identifying and avoiding non-target objects like chairs and tables. This could include behaviors such as "Avoid Obstacles" and "Identify Objects" that would be activated when the robot comes into contact with an object that is not a can or trash.
+
+7. Solve the 1994 International Association for Unmanned Systems Unmanned Ground Vehicle problem using STRIPS (Ch. 2). Be sure to include a world model and a difference table.
+
+    - No answer was provided
 
 8. Solve the 1994 AAAI Pick Up the Trash problem using STRIPS (Ch. 2). Be sure to include a world model and a difference table.
 
-9.  How is defining a robot’s behaviors linked to the robot’s ecological niche?y
+    - No answer was provided
 
-10. What is special about a primitive behavior in terms of perceptual and motor schema?y
+9.  How is defining a robot’s behaviors linked to the robot’s ecological niche?
+
+    Defining a robot's behaviors is closely linked to the robot's ecological niche, as the behaviors of a robot are designed to allow the robot to successfully navigate and interact with its environment. The ecological niche of a robot refers to the specific role and tasks that the robot is designed to perform within its environment, as well as the specific conditions and constraints that the robot is able to operate under.
+
+    When designing the behaviors for a robot, the robot's ecological niche must be taken into consideration in order to ensure that the robot is able to effectively perform its intended tasks and function within its environment. For example, if a robot is designed to operate in a factory setting, its behaviors would need to be tailored to the specific conditions and constraints of the factory environment, such as navigating around obstacles, avoiding collisions with other machinery, and picking up and transporting parts.
+
+    Similarly, if a robot is designed to operate in an outdoor environment, its behaviors would need to be tailored to the specific conditions and constraints of the outdoor environment, such as navigating rough terrain, avoiding obstacles, and dealing with changing weather conditions.
+
+    In summary, defining a robot's behaviors is closely linked to the robot's ecological niche as the behaviors must be tailored to the specific conditions and constraints of the environment in which the robot will operate. This will allow the robot to effectively perform its intended tasks and function within its environment.
+
+10. What is special about a primitive behavior in terms of perceptual and motor schema?
+
+    A primitive behavior is considered special because it is a basic, simple behavior that a robot can perform using a specific set of perceptual and motor schema. These schema are typically hard-wired into the robot's control system and are not easily changed or modified. They are designed to allow the robot to perform a specific task or respond to a specific stimulus in a pre-determined way. For example, a primitive behavior for a robot might include avoiding obstacles or following a specific path. These behaviors are often used as building blocks for more complex behaviors.
 
 11. Construct a Behavioral Table of the behaviors needed for a robot to move from room to room.
 
+    |Behavior|Perceptual Schema|Motor Schema|
+    | ------------- |:-------------:| -----:|
+    |Move to Room|Detect Room|Move towards Room|
+    |Avoid Obstacles|Detect Obstacles|Move around Obstacles
+    |Open Door|Detect Door|Open Door
+    |Move Through Door|None|Move through Open Door|
+    |Close Door|Detect Open Door|Close Open Door|
+
+    Note: The behaviors listed above are basic behaviors that would be needed for a robot to move from room to room. Additional behaviors, such as detecting and navigating stairs or elevators, would also be necessary depending on the specific environment and layout of the building. The perceptual schema and motor schema listed above are not exhaustive and may require further refinement depending on the specific implementation of the robot.
+
 12. What are the two main deficits encountered when designing and implementing reactive robotic systems?
+
+    The two main deficits encountered when designing and implementing reactive robotic systems are:
+
+    1. The lack of a clear and consistent world model: Reactive systems rely heavily on sensor input to make decisions, but sensors can be unreliable and can produce inconsistent or contradictory information. This can lead to difficulties in defining the robot's behavior and in making robust and reliable decisions.
+
+    2. The lack of ability to handle complex tasks: Reactive systems are designed to handle simple tasks that require quick decisions, but they are not well suited to tasks that require long-term planning or that involve multiple steps. This can limit the range of tasks that a reactive robotic system can handle.
 
 13. Make up a task for a robot to complete. Describe what each of the 7 steps of the design methodology would require you to do to complete the task.
 
