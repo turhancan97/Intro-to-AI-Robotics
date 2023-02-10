@@ -1,50 +1,53 @@
-class Landmark:
-  def __init__(self, x, y):
-    self.position = (x, y)
-  
-  def distance(self, x, y):
-    # Calculate the Euclidean distance between the landmark and the given point
-    return ((self.position[0] - x)**2 + (self.position[1] - y)**2)**0.5
+import numpy as np
+import matplotlib.pyplot as plt
 
-class Robot:
-  def __init__(self, x, y):
-    self.position = (x, y)
-  
-  def move(self, x, y):
-    # Update the robot's position
-    self.position = (x, y)
+# Define the landmark location
+landmark = np.array([5, 5])
 
-def localize(robot, landmark, max_iterations):
-  # Initialize the current and previous positions to the robot's initial position
-  current_pos = robot.position
-  prev_pos = robot.position
-  
-  # Initialize the iteration counter to 0
-  iteration = 0
-  
-  # Keep looping until the maximum number of iterations is reached or the algorithm converges
-  while iteration < max_iterations and current_pos != prev_pos:
-    # Store the current position as the previous position
-    prev_pos = current_pos
+# Define the robot's starting position
+robot_start = np.array([0, 0])
+
+# Define the steps for the hill-climbing algorithm
+steps = np.array([[1, 0], [0, 1], [-1, 0], [0, -1]])
+
+# Initialize the robot's position
+robot_pos = robot_start
+
+# Define a function to calculate the distance between the robot and the landmark
+def distance(robot_pos, landmark):
+    return np.linalg.norm(robot_pos - landmark)
+
+pos_x = []
+pos_y = []
+
+
+# Define the hill-climbing algorithm
+while True:
+    # Initialize the minimum distance to infinity
+    min_distance = float('inf')
     
-    # Move the robot to the new position with the smallest distance to the landmark
-    current_pos = min([(robot.position[0] + dx, robot.position[1] + dy) for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]], key=lambda pos: landmark.distance(*pos))
-    robot.move(*current_pos)
+    # Check the distance for each step
+    for step in steps:
+        pos_x.append(robot_pos[0])
+        pos_y.append(robot_pos[1])
+        new_pos = robot_pos + step
+        new_distance = distance(new_pos, landmark)
+        
+        # Update the minimum distance and the new position if the distance is smaller
+        if new_distance < min_distance:
+            min_distance = new_distance
+            robot_pos = new_pos
     
-    # Increase the iteration counter by 1
-    iteration += 1
-  
-  # Return the final position of the robot
-  return current_pos
+    # Stop the loop if the robot reaches the landmark
+    if min_distance <= 0:
+        break
 
-# Define a landmark at position (3, 5)
-landmark = Landmark(3, 5)
-
-# Define a robot at position (0, 0)
-robot = Robot(0, 0)
-
-# Localize the robot relative to the landmark
-final_pos = localize(robot, landmark, 100)
-
-# Print the final position of the robot
-print(final_pos) # (3, 5)
+# Plot the results
+plt.scatter(landmark[0], landmark[1], color='red', marker='x', label='Landmark')
+plt.scatter(robot_start[0], robot_start[1], color='blue', marker='o', label='Start')
+plt.scatter(robot_pos[0], robot_pos[1], color='green', marker='o', label='End')
+plt.plot(pos_x,pos_y,c='b',alpha=0.5, label='Trajectory')
+plt.xlim(-10,10)
+plt.ylim(-10,10)
+plt.legend()
+plt.show()

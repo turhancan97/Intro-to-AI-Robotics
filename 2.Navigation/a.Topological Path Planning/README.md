@@ -162,6 +162,12 @@ b. Hill-climbing is a search algorithm used to find the global maximum (or minim
 
 Dijkstra's algorithm and hill-climbing cannot be used interchangeably. Dijkstra's algorithm is used for finding the shortest path in a graph, while hill-climbing is used for finding the maximum (or minimum) of a function.
 
-1.  [Programming] Design a visual landmark and implement a hill-climbing algorithm to localize the robot relative to the landmark.
+15.  [Programming] Design a visual landmark and implement a hill-climbing algorithm to localize the robot relative to the landmark.
 
-2.  [Programming] Design 4 unique landmarks. a. Program the robot to visit each landmark in any order specified by a user. b. Place the landmarks at different locations. Implement Dijkstra’s single source shortest path algorithm to compute the shortest path between two points specified by a user. c. Implement a minimal spanning tree algorithm to allow the robot to visit all waypoints efficiently.
+> run q15.py code
+
+In this example, the robot starts at position [0, 0] and the landmark is located at [5, 5]. The hill-climbing algorithm calculates the distance between the robot and the landmark for each step and updates the robot's position if the distance is smaller. The loop continues until the robot reaches the landmark. The final result is visualized using matplotlib.pyplot.
+
+16.  [Programming] Design 4 unique landmarks. a. Program the robot to visit each landmark in any order specified by a user. b. Place the landmarks at different locations. Implement Dijkstra’s single source shortest path algorithm to compute the shortest path between two points specified by a user. c. Implement a minimal spanning tree algorithm to allow the robot to visit all waypoints efficiently.
+
+-- No answere provided
