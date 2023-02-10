@@ -31,7 +31,7 @@
 
 * Dijkstra Algorithm
 <p align="center">
-    <img src="docs/image/dijks.png" alt="drawing" width="500"/></p>
+    <img src="docs/image/Dijks.png" alt="drawing" width="500"/></p>
 
 * A* Algorithm
 
