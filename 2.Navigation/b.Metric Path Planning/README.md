@@ -111,10 +111,39 @@ The path from start to goal can be found by backtracking from the goal cell to t
 
 9.  Subgoal obsession has been described as a problem for metric planners. Can hybrid systems which use topological planning exhibit subgoal obsession?
 
+Subgoal obsession can occur in both metric and topological planners. In a topological planner, subgoal obsession occurs when the robot becomes fixated on reaching a specific subgoal, such as a landmark or intermediate node, instead of considering the overall path to the final destination. This can lead to inefficiencies and potential obstacles being missed. Therefore, even in a hybrid system that uses topological planning, it is important to implement strategies to avoid subgoal obsession and ensure the robot is considering the most efficient and safe path to the final destination.
+
 10. Trulla uses a dot product of 0 or less to trigger replanning, which corresponds to 90 degree from the desired path. What are the advantages or disadvantages of 90 degree? What would happen if Trulla used 45 degree or 135 degree?
+
+Trulla uses a dot product of 0 or less to trigger replanning, meaning that the angle between the current heading of the robot and the desired path is greater than or equal to 90 degrees. This threshold ensures that replanning occurs only when the robot has deviated significantly from its intended path.
+
+The advantage of using a 90 degree threshold is that it is a conservative approach that reduces the frequency of replanning and minimizes the computational resources required to generate a new path. This can be especially important in real-world environments where processing power is limited.
+
+However, there are also some disadvantages to using a 90 degree threshold. For example, if the environment is cluttered, the robot may not detect obstacles until it is too late and has already deviated from its desired path. In such cases, a more aggressive approach to replanning, such as a 45 degree or 135 degree threshold, may be more appropriate.
+
+If Trulla used a 45 degree threshold, it would trigger replanning more frequently, resulting in a smoother path and a better response to changes in the environment. However, this would also increase the computational requirements, potentially slowing down the robot's performance. If Trulla used a 135 degree threshold, it would trigger replanning less frequently, potentially leading to a less smooth path and a slower response to changes in the environment. Ultimately, the choice of threshold will depend on the specific requirements of the task and the limitations of the hardware and software being used.
 
 11. Describe the difference between continuous and event-driven replanning. Which would be more appropriate for a planetary rover? Justify your answer.
 
+Continuous replanning is the process of continually updating and adjusting the robot's plan in real-time as it moves and gathers information. The robot's current position, sensory input, and potential obstacles are used to continually update its plan to ensure it is on the optimal path.
+
+Event-driven replanning, on the other hand, only occurs when specific trigger events occur, such as a change in the environment, a failure of a component, or a change in the robot's goal. The robot only updates its plan in response to these events and does not continually adjust its plan as it moves.
+
+For a planetary rover, event-driven replanning would be more appropriate. This is because the environment on a planet is often extremely hostile and can change rapidly, making continuous replanning difficult. Additionally, the slow and resource-intensive nature of continuous replanning would limit the rover's ability to explore and gather information. Event-driven replanning allows the rover to conserve resources while still being able to react to changes in its environment as they occur.
+
 12.  [Programming] Obtain a copy of the Trulla simulator suitable for running under Windows. Model at least three different scenarios and see what the path generated is.
 
+-- No answer is provided
+
 13.  [Programming] Program an A* path planner. Compare the results to the results for the Dijkstra’s single source shortest path program from Ch. 9.
+
+> run q13_1.py and q13_2.py
+
+Dijkstra's algorithm and A* algorithm are two of the most widely used algorithms for finding the shortest path between two nodes in a graph. Both algorithms work by maintaining a priority queue of nodes, where the priority is based on the distance from the starting node.
+
+Dijkstra's algorithm works by exploring all the nodes in the graph and updating the distances of their neighbors. It updates the distances of all the neighbors to the starting node until it reaches the goal node. Dijkstra's algorithm is guaranteed to find the shortest path in a graph, but it can be slow in large graphs because it explores all nodes even if they are not on the optimal path.
+
+A* algorithm is an improvement of Dijkstra's algorithm that speeds up the search process by incorporating a heuristic function. The heuristic function is an estimate of the remaining distance from the current node to the goal node. The algorithm uses this estimate to prioritize the nodes that are closer to the goal node and minimize the number of nodes that need to be explored. The heuristic function must be admissible, meaning it must never overestimate the actual distance, and consistent, meaning it must satisfy the triangle inequality.
+
+In conclusion, A* algorithm is faster than Dijkstra's algorithm because it prioritizes nodes that are likely to be on the optimal path. However, it depends on the quality of the heuristic function, so the results of A* algorithm may not be optimal if the heuristic function is not admissible and consistent.
+
