@@ -125,7 +125,7 @@ In either style, the three levels of the spatial hierarchy would be used in comb
 
 Minerva used topological navigation and used objects in the environment as landmarks. These objects were categorized into semantic classes such as buildings, trees, and signs, and their location was represented in a topological map. The map was used to plan paths between waypoints and to guide the robot's movements in the environment.
 
-11. [World Wide Web] Visit the Minerva site as http://www.cs.cmu.edu/Minerva. Write a one-page paper summarizing the project.
+11. [World Wide Web] Visit the Minerva site as https://www.cs.cmu.edu/~Minerva/. Write a one-page paper summarizing the project.
 
 Minerva is a talking robot designed to accommodate people in public spaces. She perceives her environment through her sensors (cameras, laser range finders, ultrasonic sensors), and decides what to do using her computers. Minerva actively approaches people, offers tours, and then leads them from exhibit to exhibit. When Minerva is happy, she sings and smiles at nearby people. But don't block her way too often--otherwise, she'll become frustrated and might frown at you and honk her horn!
 
