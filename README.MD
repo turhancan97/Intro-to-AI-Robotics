@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Robotic Paradigms](#)
-  * [From Teleoperation To Autonomy](#)
+* [Robotic Paradigms](/1.Robotic_Paradigms/)
+  * [From Teleoperation To Autonomy](/1.Robotic_Paradigms/a.From_Teleoperation_To_Autonomy/README.MD)
   * [The Hierarchical Paradigm](#)
   * [Biological Foundations of the Reactive Paradigm](#)
   * [The Reactive Paradigm](#)
