@@ -1,3 +1,9 @@
+# Exercises - Chapter 10
+
+## Metric Path Planning
+
+---
+
 1. Represent your indoor environment as a GVG, regular grid, and quadtree.
 
 Representing an indoor environment as a Graph-Based Virtual Environment (GVG), regular grid, and quadtree can be done as follows:

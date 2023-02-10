@@ -1,3 +1,9 @@
+# Exercises - Chapter 11
+
+## Localization and Map Making
+
+---
+
 1. An important property of an occupancy grid is that it supports sensor fusion. Define sensor fusion in one or two sentences and give two examples.
 
 Sensor fusion is the process of combining multiple sources of information to produce a more accurate and complete representation of a given situation. An example of sensor fusion in robotics is the combination of data from lidar, radar, and camera sensors to produce a more complete map of the environment. Another example is the use of inertial measurement units and GPS data to estimate the position and orientation of a robot with higher accuracy.

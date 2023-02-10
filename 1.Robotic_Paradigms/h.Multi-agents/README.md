@@ -1,3 +1,9 @@
+# Exercises - Chapter 8
+
+## Multi-Agents
+
+---
+
 1. Give three reasons why multi-agents are desirable. Describe the general attributes of applications which are well-suited for multi-agents, and give one example.
 
 Three reasons why multi-agents are desirable are:

@@ -4,18 +4,18 @@
 
 * [Robotic Paradigms](/1.Robotic_Paradigms/)
   * [From Teleoperation To Autonomy](/1.Robotic_Paradigms/a.From_Teleoperation_To_Autonomy/README.MD)
-  * [The Hierarchical Paradigm](#)
-  * [Biological Foundations of the Reactive Paradigm](#)
-  * [The Reactive Paradigm](#)
-  * [Designing a Reactive Implementation](#)
-  * [Common Sensing Techniques for Reactive Robots](#)
-  * [The Hybrid Deliberative/Reactive Paradigm](#)
-  * [Multi-agents](#)
-* [Navigation](#)
-    * [Topological Path Planning](#)
-    * [Metric Path Planning](#)
-    * [Localization and Map Making](#)
-    * [On the Horizon](#)
+  * [The Hierarchical Paradigm](/1.Robotic_Paradigms/b.The_Hierarchical_Paradigm/README.MD)
+  * [Biological Foundations of the Reactive Paradigm](/1.Robotic_Paradigms/c.Biological_Foundations_of_the_Reactive_Paradigm/README.md)
+  * [The Reactive Paradigm](/1.Robotic_Paradigms/d.The_Reactive_Paradigm/README.md)
+  * [Designing a Reactive Implementation](/1.Robotic_Paradigms/e.Designing_a_Reactive_Implementation/README.md)
+  * [Common Sensing Techniques for Reactive Robots](/1.Robotic_Paradigms/f.Common_Sensing_Techniques_for_Reactive_Robots/Readme.md)
+  * [The Hybrid Deliberative/Reactive Paradigm](/1.Robotic_Paradigms/g.The_Hybrid_Deliberative-Reactive_Paradigm/README.md)
+  * [Multi-agents](/1.Robotic_Paradigms/h.Multi-agents/README.md)
+* [Navigation](/2.Navigation/)
+    * [Topological Path Planning](/2.Navigation/a.Topological_Path_Planning/README.md)
+    * [Metric Path Planning](/2.Navigation/b.Metric_Path_Planning/README.md)
+    * [Localization and Map Making](/2.Navigation/c.Localization_and_Map_Making/README.md)
+    * [On the Horizon](/2.Navigation/d.On_the_Horizon/README.md)
 
 ## Some Questions and Answers
 
@@ -28,3 +28,12 @@
 
 <p align="center">
     <img src="docs/image/home_move.gif" alt="drawing" width="500"/></p>
+
+* Dijkstra Algorithm
+<p align="center">
+    <img src="docs/image/dijks.png" alt="drawing" width="500"/></p>
+
+* A* Algorithm
+
+<p align="center">
+    <img src="docs/image/astar.png" alt="drawing" width="500"/></p>

@@ -1,3 +1,9 @@
+# Exercises - Chapter 7
+
+## The Hybrid Deliberative-Reactive Paradigm
+
+---
+
 1. Describe the Hybrid paradigm in terms of: a. sensing, acting, and planning, and b. sensing organization.
 
     A. The Hybrid paradigm in terms of sensing, acting, and planning refers to the integration of multiple methods to accomplish a task. This approach involves combining different modalities of sensing, like computer vision, touch, and auditory, along with the physical actions of the robot and the planning of the overall task. This integration allows for a more comprehensive understanding of the environment and increases the efficiency of the robot's actions.

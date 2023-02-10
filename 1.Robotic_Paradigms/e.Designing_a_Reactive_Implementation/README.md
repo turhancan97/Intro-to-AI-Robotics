@@ -1,3 +1,9 @@
+# Exercises - Chapter 5
+
+## Designing a Reactive Implementation
+
+---
+
 1. What is the difference between a primitive and an abstract behavior?
 
    *  **Primitive behavior** is composed of only one perceptual schema and one motor schema; there is no need to have any coordinated control program. Primitive behaviors can be thought of being monolithic, where they do only one (“mono”) thing. Because they are usually a simple mapping from stimulus to response, they are often programmed as a single method, not composed from multiple methods or objects. The concept of Perceptual and Motor Schema is there, but hidden for the sake of implementation. Behaviors which are assembled from other behaviors or have multiple perceptual schema and motor schema will be referred to as abstract behaviors, because they are farther removed from the sensors and actuators than a primitive behavior. The use of the term **abstract behavior** should not be confused with an abstract class in OOP.

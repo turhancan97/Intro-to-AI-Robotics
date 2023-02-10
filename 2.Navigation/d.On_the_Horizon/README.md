@@ -1,3 +1,9 @@
+# Exercises - Chapter 12
+
+## On the Horizon
+
+---
+
 1. Define polymorphism. List the challenges for sensing and intelligent control for a polymorphic platform.
 
 Polymorphism refers to the ability of an object or platform to change its form, structure, or shape in order to adapt to different environments and tasks. In robotics, polymorphism refers to the concept of shape-shifting robots, where a single platform can change its physical form and shape in response to different scenarios, environments, or tasks. This allows the robot to become better suited to a particular situation and improve its overall efficiency and effectiveness. The challenges for sensing and intelligent control in polymorphic robots include the ability to accurately sense changes in the environment, the ability to control and coordinate multiple actuators and parts during shape-shifting, and the ability to make decisions about when and how to change the form of the robot.

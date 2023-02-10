@@ -1,3 +1,9 @@
+# Exercises - Chapter 9
+
+## Topological Path Planning
+
+---
+
 1. List the four questions associated with navigation.
 
 * Where am I?

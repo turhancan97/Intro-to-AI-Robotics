@@ -1,3 +1,9 @@
+# Exercises - Chapter 6
+
+## Common Sensing Techniques for Reactive Robots
+
+---
+
 1. Define sensor suite, active/passive sensors, dead reckoning, computer vision.
 
     **Sensor suite** refers to a set of sensors that are installed on a robot for the purpose of collecting information about the environment. This information is used by the robot to make decisions and perform tasks.
