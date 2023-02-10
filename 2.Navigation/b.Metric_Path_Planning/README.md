@@ -87,31 +87,31 @@ In a regular grid, the wavefront can be propagated in four directions: up, down,
 
 For example, consider a 4x4 regular grid with the start cell at (1,1) and the goal cell at (4,4). The initial grid would look like this:
 
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
+    0 0 0 0
+    0 0 0 0
+    0 0 0 0
+    0 0 0 0
 
 The first iteration would update the values of the neighbors of the start cell to 1:
 
-0 1 0 0
-1 0 0 0
-0 0 0 0
-0 0 0 0
+    0 1 0 0
+    1 0 0 0
+    0 0 0 0
+    0 0 0 0
 
 The next iteration would update the values of the neighbors of the cells with value 1:
 
-0 1 0 0
-1 2 0 0
-0 0 0 0
-0 0 0 0
+    0 1 0 0
+    1 2 0 0
+    0 0 0 0
+    0 0 0 0
 
 This process continues until the goal cell is reached. The final grid would look like this:
 
-0 1 2 3
-1 2 3 4
-2 3 4 5
-3 4 5 6
+    0 1 2 3
+    1 2 3 4
+    2 3 4 5
+    3 4 5 6
 
 The path from start to goal can be found by backtracking from the goal cell to the start cell, following the cells with the lowest values.
 
